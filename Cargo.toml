@@ -1,0 +1,28 @@
+[package]
+name = "swarmnode"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hamza HAMIDI"]
+license = "MIT"
+homepage = "https://github.com/swarmnode-ai/swarmnode-rust"
+repository = "https://github.com/swarmnode-ai/swarmnode-rust"
+description = "A Rust client for swarmnode.ai"
+keywords = ["swarmnode.ai", "swarmnode", "ai", "client", "rust"]
+readme = "README.md"
+
+[dependencies]
+async-stream = "0.3.6"
+futures-util = "0.3.31"
+lazy_static = "1.5.0"
+reqwest = { version = "0.12.11", features = ["json", "blocking"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.134"
+tokio = { version = "1.42.0", features = ["full"] }
+tokio-tungstenite = "0.26.1"
+
+[lib]
+name = "swarmnode"
+
+[[bin]]
+name = "main"
+path = "bin/main.rs"
